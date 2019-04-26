@@ -1,11 +1,11 @@
 <h1>Artist Form</h1>
 
 <%= form_tag('/artists') do %>
-  <%= label_tag :name %>
-  <%= text_field_tag :name %>
+  <%= label_tag 'artist[:name]' %>
+  <%= text_field_tag 'artist[:name]' %>
 
-  <%= label_tag :bio %>
-  <%= text_field_tag :bio %>
+  <%= label_tag 'artist[:bio]' %>
+  <%= text_field_tag 'artist[:bio]' %>
 
   <%= submit_tag "Create Artist" %>
 <% end %>
