@@ -9,9 +9,13 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    @artist = Artist.new
   end
 
   def create
+    @artist = Artist.new(params.require(:artist).permit(:name, :bio))
+    @artist.save
+    redirect_to artist_path(@artist)
   end
 
   def update
